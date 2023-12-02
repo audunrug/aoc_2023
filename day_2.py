@@ -41,9 +41,6 @@ def get_cube_power(game):
 
 	return power
 
-
-
-
 with open("input_2.txt") as file:
 	games = file.read().splitlines()
 
@@ -51,16 +48,10 @@ with open("input_2.txt") as file:
 goal = {"red": 12, "green": 13, "blue": 14}
 results_1, results_2 = [], []
 for g in games:
-	print(g)
 	game_n, game = g.split(": ")	
-	print(get_game_max(game))
-	print(get_cube_power(game))
-	print("")
 	if check_possible(game, goal):
 		results_1.append(int(game_n.split(" ")[-1]))
-	results_2.append(get_cube_power(game))
-print(results_1)
-print(results_2)
+	results_2.append(get_cube_power(game))ß
 
 print(f"sum of possible games (p1): {sum(results_1)}")
 print(f"sum of cube powers (p2): {sum(results_2)}")
