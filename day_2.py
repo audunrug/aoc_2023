@@ -51,7 +51,7 @@ for g in games:
 	game_n, game = g.split(": ")	
 	if check_possible(game, goal):
 		results_1.append(int(game_n.split(" ")[-1]))
-	results_2.append(get_cube_power(game))ß
+	results_2.append(get_cube_power(game))
 
 print(f"sum of possible games (p1): {sum(results_1)}")
 print(f"sum of cube powers (p2): {sum(results_2)}")
