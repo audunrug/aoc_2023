@@ -40,4 +40,4 @@ for i in range(len(cards_copies)):
         cards_copies = make_new_cards(cards_copies, i, cards_copies[i][0])
 
 total_cards = [c[1] for c in cards_copies]
-print(f"Total number of card copies, part 1: {sum(total_cards)}")
+print(f"Total number of card copies, part 2: {sum(total_cards)}")
