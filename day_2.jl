@@ -18,7 +18,6 @@ end
 
 get_power(gm) = prod([maximum(gm[col]) for col in keys(gm)])
 
-
 f = open("input_2.txt", "r")
 lines = readlines(f) 
 close(f)

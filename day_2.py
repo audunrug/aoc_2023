@@ -1,6 +1,3 @@
-import numpy as np
-import pandas as pd
-
 def sort_game(game):
 	rounds = game.split("; ")
 	game_res = {}
@@ -55,8 +52,3 @@ for g in games:
 
 print(f"sum of possible games (p1): {sum(results_1)}")
 print(f"sum of cube powers (p2): {sum(results_2)}")
-
-
-
-
-
