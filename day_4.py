@@ -27,9 +27,9 @@ def make_new_cards(cards, i, n):
 
 with open("input_4.txt") as file:
 	cards = file.read().splitlines()
+only_cards = [c.split(": ")[1] for c in cards]
 
 # part 1
-only_cards = [c.split(": ")[1] for c in cards]
 all_points = [get_card_points(c) for c in only_cards]
 print(f"Sum of all card points, part 1: {sum(all_points)}")
 
