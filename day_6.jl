@@ -3,11 +3,8 @@ function find_win_combos(race)
     wins = 0
     for i in 1:t
         if i*(t-i) >= d
-            wins += 1
-        end
-    end
-    return wins
-end
+            wins += 1 end end
+    return wins end
 
 f = open("input_6.txt", "r")
 lines = readlines(f) 
