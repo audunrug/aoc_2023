@@ -51,7 +51,7 @@ def get_type(h, J=False):
             elif mc + js == 3:
                 type = 4
             elif sorted(counts) == [1, 2, 2]:
-                type == 3
+                type = 3
             elif mc + js == 2:
                 type = 2
             else:
@@ -63,10 +63,7 @@ def get_type(h, J=False):
 def sort_hands(hands, J=False):
     sorts = []
     for h in hands:
-         if J:
-            sorts.append((get_type(h, J=1), convert_hand(h, J=1), h))
-         else:
-            sorts.append((get_type(h, J=0), convert_hand(h, J=0), h))
+        sorts.append((get_type(h, J=J), convert_hand(h, J=J), h))
     sorts = sorted(sorts)
     return(sorts)
 
@@ -78,13 +75,13 @@ for l in lines:
 	bids[g[0]] = int(g[1])
 
 # part 1
-srt, w = sort_hands(bids.keys(),J=0), 0
+srt, w = sort_hands(bids.keys(),J=False), 0
 for i in range(len(srt)):
     w += bids[srt[i][2]] * (i+1)
 print(w)
 
 # part 2
-srt, w = sort_hands(bids.keys(), J=1), 0
+srt, w = sort_hands(bids.keys(), J=True), 0
 for i in range(len(srt)):
     w += bids[srt[i][2]] * (i+1)
 print(w)
